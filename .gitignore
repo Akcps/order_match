@@ -146,3 +146,8 @@ ENV/
 # Rope project settings
 .ropeproject
 
+
+# pyc files
+.pyc
+
+
