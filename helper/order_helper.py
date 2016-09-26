@@ -13,12 +13,14 @@ def process_order(company):
             if sell.price <= buy.price:
                 if sell.no_of_stocks > buy.no_of_stocks:
                     sell.no_of_stocks = sell.no_of_stocks - buy.no_of_stocks
-                    print "{0} {1} {2}".format(sell.order_number, buy.no_of_stocks, sell.price)
+                    print "{0} {1} {2}".format(sell.order_number,
+                                               buy.no_of_stocks, sell.price)
                     i = -1
                     buy_queue.pop()
                 else:
                     buy.no_of_stocks = buy.no_of_stocks - sell.no_of_stocks
-                    print "{0} {1} {2}".format(sell.order_number, sell.no_of_stocks, sell.price)
+                    print "{0} {1} {2}".format(sell.order_number,
+                                               sell.no_of_stocks, sell.price)
                     j = -1
                     sell_queue.pop()
             else:

@@ -11,7 +11,9 @@ class TransactionQueue:
 
     def sort_list(self, reverse=False):
         self.transactions = sorted(self.transactions,
-                                   key=lambda x: (x.price, x.timestamp), reverse=reverse)
+                                   key=lambda x:
+                                   (x.price, x.timestamp),
+                                   reverse=reverse)
 
     def insert(self, transaction):
         self.transactions.append(transaction)
